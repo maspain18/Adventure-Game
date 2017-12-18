@@ -1,0 +1,17 @@
+Tennis = 1
+Basketball = 2
+Soccer = 3
+Wrestling = 4
+field = 0
+
+layout = input("There's a panal in front of you, the options are T for tennis, S for soccer, B for basketball and W for Wrestling, enter a letter: ")
+if layout == T:
+  field = Tennis
+elif layout == B:
+  field = Basketball
+elif layout == S:
+  field = Soccer
+elif layout == W:
+  field = Wrestling
+else:
+  print("That is not an option")
