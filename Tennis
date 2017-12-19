@@ -1,1 +1,40 @@
+import random
 
+
+
+def tennis_game():
+    win = 0
+    lose = 0
+    print("He serves the ball")
+    while True:
+        los = lose
+        wi = win
+        swing = raw_input("Swing Left or Right ")
+        left_or_right = random.randint(1, 2)
+        if left_or_right == 1:
+            print("You returned the ball")
+            returned = random.randint(1, 2)
+            if returned == 1:
+                win = wi + 1
+                print("You have " + str(win) + " points")
+            else:
+                print("He returns the ball")
+        else:
+            lose = los + 1
+            print("You missed he has " + str(lose) + " points")
+        if win == 3:
+            print("You won")
+            break
+        if lose == 3:
+            print("You lost")
+            break
+def tennis():
+    print(" ")
+    print("The field flips and turns to reveil a tennis court")
+    print("Your opponent waits for you to get ready")
+    while True:
+        racket = raw_input("Grab your racket: ")
+        if racket == "yes":
+            print(" ")
+            break
+    tennis_game()
