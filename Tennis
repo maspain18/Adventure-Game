@@ -77,6 +77,7 @@ def tennis_game():
 def tennis():
     print(" ")
     print("The field flips and turns to reveil a tennis court")
+    print("A robotic figure appears in front of you")
     print("Your opponent waits for you to get ready")
     while True:
         racket = raw_input("Grab your racket: ")
