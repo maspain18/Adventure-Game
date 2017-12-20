@@ -1,2 +1,24 @@
+import random
 def basketball():
-  
+    print ("You have Chosen the basketball option.") 
+    print ("You will be placed in a basketball game and have to try to win.")
+    print ("The other team is up by 2 and there is 10 seconds left in the game and it's your ball")  
+    dribble = raw_input("do you chose to dribble to the left or right?: ")
+    if dribble == "left":
+        print ("You have chosen to dribble to the left")
+        shoot = raw_input("do you chose to shoot?: ")
+        if shoot == "yes":
+            print "you missed the shot"
+        if shoot == "no":
+            pas = raw_input("do you chose to pass?: ")
+            print ("You passed the ball to a teammate.")
+    if dribble == "right":
+        print ("You have chosen to dribble to the right")
+        shoot = raw_input("do you chose to shoot?: ")
+        if shoot == "yes":
+            print "you made the shot you are now down by 2"
+        if shoot == "no":
+            pas = raw_input("do you chose to pass?: ")
+            print ("You passed the ball to the other team.")
+        
+        
