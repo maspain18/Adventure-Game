@@ -11,14 +11,29 @@ def basketball():
             print "you missed the shot"
         if shoot == "no":
             pas = raw_input("do you chose to pass?: ")
-            print ("You passed the ball to a teammate.")
+            if pas == "yes":
+                print ("You passed the ball to a teammate.")
+            if pas =="no":
+                print ("you keep dribbling to the hoop")
+                layup = raw_input("do you take the lay up wirh your right or left hand?: ")
+                if layup == "left":
+                    print("you maked the layup you have tied the game!")
+                if layup == "right":
+                    print ("you got blocked be the other team and now they have the ball.")
     if dribble == "right":
         print ("You have chosen to dribble to the right")
         shoot = raw_input("do you chose to shoot?: ")
         if shoot == "yes":
-            print "you made the shot you are now down by 2"
+            print "you made the shot you tied the game"
         if shoot == "no":
             pas = raw_input("do you chose to pass?: ")
-            print ("You passed the ball to the other team.")
-        
-        
+            if pas == "yes":
+                print ("You passed the ball to the other team.")
+            if pas == "no":
+                print ("You turn the ball over.")
+        print ("You now have to go and play defence!")
+        defence = raw_input("The other team is about to pass the ball up the court do you go for the steal?: ")
+        if defence == "yes":
+            steal = random.randint(1,2)
+            if steal == 1:
+                print("you stole the ball and now have a fast brake.")
