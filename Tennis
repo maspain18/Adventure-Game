@@ -8,10 +8,37 @@ def tennis_game():
     difficulty = raw_input("What difficulty do you choose: easy, normal, hard ")
     print("He serves the ball")
     while True:
+        if win == 3:
+            print("You won")
+            break
+        if lose == 3:
+            print("You lost")
+            break
+        retrn = random.randint(1,4)
+        out = random.randint(1,2)
+        print(" ")
+        if retrn == 1:
+            print("The ball goes short you run up to return it")
+        elif retrn == 2:
+            print("The ball sails over head")
+        elif retrn == 3:
+            print("The ball goes to your left")
+        elif retrn == 4:
+            print("The ball goes to your right")
         if difficulty == "normal":
             los = lose
             wi = win
-            swing = raw_input("Swing Left or Right ")
+            swing = raw_input("Swing Left, Right, or Leave ")
+            if swing == "Leave":
+                if out == 1:
+                    print("The ball went out")
+                    win = wi + 1
+                    print("You have " + str(win) + " points")
+                    continue
+                else:
+                    lose = los + 1
+                    print("You missed he has " + str(lose) + " points")
+                    continue
             left_or_right = random.randint(1, 2)
             if left_or_right == 1:
                 print("You returned the ball")
@@ -24,16 +51,20 @@ def tennis_game():
             else:
                 lose = los + 1
                 print("You missed he has " + str(lose) + " points")
-            if win == 3:
-                print("You won")
-                break
-            if lose == 3:
-                print("You lost")
-                break
         elif difficulty == "easy":
             los = lose
             wi = win
-            swing = raw_input("Swing Left or Right ")
+            swing = raw_input("Swing Left, Right, or Leave ")
+            if swing == "Leave":
+                if out == 1:
+                    print("The ball went out")
+                    win = wi + 1
+                    print("You have " + str(win) + " points")
+                    continue
+                else:
+                    lose = los + 1
+                    print("You missed he has " + str(lose) + " points")
+                    continue
             left_or_right = random.randint(1, 3)
             if left_or_right == 1 or left_or_right == 2:
                 print("You returned the ball")
@@ -46,16 +77,20 @@ def tennis_game():
             else:
                 lose = los + 1
                 print("You missed he has " + str(lose) + " points")
-            if win == 3:
-                print("You won")
-                break
-            if lose == 3:
-                print("You lost")
-                break
         else:
             los = lose
             wi = win
-            swing = raw_input("Swing Left or Right ")
+            swing = raw_input("Swing Left, Right, or Leave ")
+            if swing == "Leave":
+                if out == 1:
+                    print("The ball went out")
+                    win = wi + 1
+                    print("You have " + str(win) + " points")
+                    continue
+                else:
+                    lose = los + 1
+                    print("You missed he has " + str(lose) + " points")
+                    continue
             left_or_right = random.randint(1, 3)
             if left_or_right == 1:
                 print("You returned the ball")
@@ -85,3 +120,5 @@ def tennis():
             print(" ")
             break
     tennis_game()
+
+tennis()
