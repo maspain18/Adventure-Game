@@ -2,7 +2,7 @@ import random
 def basketball():
     print ("You have Chosen the basketball option.") 
     print ("You will be placed in a basketball game and have to try to win.")
-    print ("The other team is up by 2 and there is 10 seconds left in the game and it's your ball")  
+    print ("The other team is up by 2 and there is 20 seconds left in the game and it's your ball")  
     dribble = raw_input("do you chose to dribble to the left or right?: ")
     if dribble == "left":
         print ("You have chosen to dribble to the left")
