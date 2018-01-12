@@ -1,39 +1,72 @@
 import random
+
+def defence():
+    print ("You now have to go and play defence!")
+    defence = raw_input("The other team is about to pass the ball up the court do you go for the steal?: ")
+    if defence == "yes":
+        steal = random.randint(1,2)
+        if steal == 1:
+            print("you stole the ball and now have a fast brake.")
+            dribble
+        else:
+            print("You missed the steal and they score, you lost")
+
+def dribble():
+    while True:
+        dribble = raw_input("do you chose to dribble to the left or right?: ")
+        if dribble == "left":
+            print ("You have chosen to dribble to the left")
+            shoot = raw_input("do you chose to shoot?: ")
+            if shoot == "yes":
+                shot = random.randint(1,2)
+                if shot == 1:
+                    print("You scored and tied the game")
+                    break
+                else:
+                    print("You missed")
+                defence()
+            if shoot == "no":
+                pas = raw_input("do you chose to pass?: ")
+                if pas == "yes":
+                    print ("You passed the ball to a teammate.")
+                if pas =="no":
+                    print ("you keep dribbling to the hoop")
+                    layup = raw_input("do you take the lay up wirh your right or left hand?: ")
+                    if layup == "left":
+                        print("you maked the layup you have tied the game!")
+                        defence()
+                    if layup == "right":
+                        shot = random.randint(1,2)
+                        if shot == 1:
+                            print("You scored and tied the game")
+                            break
+                        else:
+                            print("You missed")
+                            defence()
+        if dribble == "right":
+            print ("You have chosen to dribble to the right")
+            shoot = raw_input("do you chose to shoot?: ")
+            if shoot == "yes":
+                shot = random.randint(1,2)
+                if shot == 1:
+                    print("You scored and tied the game")
+                    break
+                else:
+                    print("You missed")
+                defence()
+            if shoot == "no":
+                pas = raw_input("do you chose to pass?: ")
+                if pas == "yes":
+                    print ("You passed the ball to the other team.")
+                    defence()
+                if pas == "no":
+                    print ("You turn the ball over.")
+                    defence()
+
 def basketball():
     print ("You have Chosen the basketball option.") 
     print ("You will be placed in a basketball game and have to try to win.")
     print ("The other team is up by 2 and there is 20 seconds left in the game and it's your ball")  
-    dribble = raw_input("do you chose to dribble to the left or right?: ")
-    if dribble == "left":
-        print ("You have chosen to dribble to the left")
-        shoot = raw_input("do you chose to shoot?: ")
-        if shoot == "yes":
-            print "you missed the shot"
-        if shoot == "no":
-            pas = raw_input("do you chose to pass?: ")
-            if pas == "yes":
-                print ("You passed the ball to a teammate.")
-            if pas =="no":
-                print ("you keep dribbling to the hoop")
-                layup = raw_input("do you take the lay up wirh your right or left hand?: ")
-                if layup == "left":
-                    print("you maked the layup you have tied the game!")
-                if layup == "right":
-                    print ("you got blocked be the other team and now they have the ball.")
-    if dribble == "right":
-        print ("You have chosen to dribble to the right")
-        shoot = raw_input("do you chose to shoot?: ")
-        if shoot == "yes":
-            print "you made the shot you tied the game"
-        if shoot == "no":
-            pas = raw_input("do you chose to pass?: ")
-            if pas == "yes":
-                print ("You passed the ball to the other team.")
-            if pas == "no":
-                print ("You turn the ball over.")
-        print ("You now have to go and play defence!")
-        defence = raw_input("The other team is about to pass the ball up the court do you go for the steal?: ")
-        if defence == "yes":
-            steal = random.randint(1,2)
-            if steal == 1:
-                print("you stole the ball and now have a fast brake.")
+    dribble
+    
+basketball()
